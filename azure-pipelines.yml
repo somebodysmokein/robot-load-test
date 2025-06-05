@@ -1,10 +1,4 @@
 # Python package
-- task: BrowserStackConfig@0
-  inputs:
-    BrowserStackServiceEndPoint: 'Bstack'
-# Create and test a Python package on multiple Python versions.
-# Add steps that analyze code, save the dist with the build record, publish to a PyPI-compatible index, and more:
-# https://docs.microsoft.com/azure/devops/pipelines/languages/python
 
 trigger:
 - main
@@ -24,6 +18,13 @@ strategy:
       python.version: '3.11'
 
 steps:
+- task: BrowserStackConfig@0
+  inputs:
+    BrowserStackServiceEndPoint: 'Bstack'
+# Create and test a Python package on multiple Python versions.
+# Add steps that analyze code, save the dist with the build record, publish to a PyPI-compatible index, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/python
+
 - task: UsePythonVersion@0
   inputs:
     versionSpec: '$(python.version)'
@@ -35,6 +36,6 @@ steps:
   displayName: 'Install dependencies'
 
 - script: |
-    pip install pytest pytest-azurepipelines
-    pytest
+    pip install -r requirements.txt
+    browserstack-sdk robot sample_test.robot
   displayName: 'pytest'
