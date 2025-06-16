@@ -1,0 +1,8 @@
+2025-06-16T07:13:34Z [browserstack_sdk.__init__][INFO] - SDK run started with id: 0dccd8d8-a9b1-4909-a97d-6fe631ef79d5
+2025-06-16T07:13:34Z [browserstack_sdk.__init__][INFO] - Project and debug logs are captured by default. To disable, set disableAutoCaptureLogs: true in config.
+2025-06-16T07:13:34Z [browserstack_sdk.__init__][INFO] - Setting up for Browserstack, using framework: robot
+==============================================================================
+Sample Test                                                                   
+==============================================================================
+2025-06-16T07:13:35Z [browserstack_sdk.__init__][INFO] - Completed setup!
+Loop Through Data                                                     

@@ -1,15 +1,14 @@
-2025-06-05T10:53:30Z [browserstack_sdk.__init__][INFO] - SDK run started with id: 032f3729-54e9-4fef-9516-3a108529d786
-2025-06-05T10:53:30Z [browserstack_sdk.__init__][INFO] - Project and debug logs are captured by default. To disable, set disableAutoCaptureLogs: true in config.
-2025-06-05T10:53:31Z [browserstack_sdk.__init__][INFO] - Setting up for Browserstack, using framework: robot
+2025-06-14T07:24:40Z [browserstack_sdk.__init__][INFO] - SDK run started with id: fd57ce2a-7a00-44a5-b51c-a9e466ef7b5e
+2025-06-14T07:24:40Z [browserstack_sdk.__init__][INFO] - Project and debug logs are captured by default. To disable, set disableAutoCaptureLogs: true in config.
+2025-06-14T07:24:41Z [browserstack_sdk.__init__][INFO] - Setting up for Browserstack, using framework: robot
 ==============================================================================
 Sample Test                                                                   
 ==============================================================================
-2025-06-05T10:53:31Z [browserstack_sdk.__init__][INFO] - Completed setup!
-Loop Through Data                                                     | PASS |
+2025-06-14T07:24:41Z [browserstack_sdk.__init__][INFO] - Completed setup!
+Loop Through Data                                                     | FAIL |
+WebDriverException: Message: Session not started or terminated
 ------------------------------------------------------------------------------
-Sample Test                                                           | PASS |
-1 test, 1 passed, 0 failed
+Sample Test                                                           | FAIL |
+1 test, 0 passed, 1 failed
 ==============================================================================
 Output:  /Users/venky.webhook/Projects/MerckDebugging/pabot_results/0/output.xml
-2025-06-05T10:58:23Z [browserstack_sdk.__init__][INFO] - Handling session close
-2025-06-05T10:58:24Z [browserstack_sdk.__init__][INFO] - All done!

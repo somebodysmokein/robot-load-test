@@ -1,3 +1,5 @@
 /Users/venky.webhook/Projects/MerckDebugging/venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
   warnings.warn(
 [ WARN ] exexcutable_path is being deprecated. Please use service to configure the driver's executable_path as per documentation.
+[ WARN ] Keyword 'Capture Page Screenshot' could not be run on failure: Message: Session not started or terminated
+

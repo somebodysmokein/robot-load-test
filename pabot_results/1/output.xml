@@ -1,222 +1,1992 @@
-<robot generator="Robot 7.2.2 (Python 3.9.6 on darwin)" generated="2025-06-05T16:23:31.569318" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2.2 (Python 3.9.6 on darwin)" generated="2025-06-14T12:54:41.454926" rpa="false" schemaversion="5">
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Sample Test" id="s1" pass="1" fail="0" skip="0">Sample Test</stat>
+<stat name="Sample Test" id="s1" pass="0" fail="1" skip="0">Sample Test</stat>
 </suite>
 </statistics>
 <suite name="Suites" id="s0"><suite id="s1" name="Sample Test Windows, 10, Edge, latest" source="/Users/venky.webhook/Projects/MerckDebugging/sample_test.robot">
 <kw name="Open Browser To Login Page" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-06-05T16:23:31.609584" level="WARN">exexcutable_path is being deprecated. Please use service to configure the driver's executable_path as per documentation.</msg>
-<msg time="2025-06-05T16:23:31.609988" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/login'.</msg>
-<msg time="2025-06-05T16:23:31.611363" level="INFO">Completed setup!</msg>
+<msg time="2025-06-14T12:54:41.505378" level="WARN">exexcutable_path is being deprecated. Please use service to configure the driver's executable_path as per documentation.</msg>
+<msg time="2025-06-14T12:54:41.505818" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/login'.</msg>
+<msg time="2025-06-14T12:54:41.507419" level="INFO">Completed setup!</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <arg>executable_path=/Users/venky.webhook/Downloads/chromedriver-mac-arm64-v2/chromedriver</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-06-05T16:23:31.609244" elapsed="16.590317" />
+<status status="PASS" start="2025-06-14T12:54:41.504977" elapsed="16.778520" />
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-06-05T16:23:48.201372" elapsed="0.139136" />
+<status status="PASS" start="2025-06-14T12:54:58.285470" elapsed="0.155324" />
 </kw>
-<status status="PASS" start="2025-06-05T16:23:31.608049" elapsed="16.734433" />
+<status status="PASS" start="2025-06-14T12:54:41.503665" elapsed="16.938192" />
 </kw>
 <test id="s1-t1" name="Loop Through Data" line="18">
 <kw name="Read Test Data" owner="data_reader">
-<msg time="2025-06-05T16:23:48.349408" level="INFO">${records} = [{'username': 'user1', 'password': 'pass1'}, {'username': 'user2', 'password': 'pass2'}, {'username': 'user3', 'password': 'pass3'}, {'username': 'user50', 'password': 'pass50'}]</msg>
+<msg time="2025-06-14T12:54:58.454763" level="INFO">${records} = [{'username': 'user1', 'password': 'pass1'}, {'username': 'user2', 'password': 'pass2'}, {'username': 'user3', 'password': 'pass3'}, {'username': 'user4', 'password': 'pass3'}, {'username': 'user5', '...</msg>
 <var>${records}</var>
 <arg>${DATA_FILE}</arg>
-<status status="PASS" start="2025-06-05T16:23:48.347938" elapsed="0.002455" />
+<status status="PASS" start="2025-06-14T12:54:58.449133" elapsed="0.007046" />
 </kw>
 <for flavor="IN">
 <iter>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-06-05T16:23:48.354218" level="INFO">Logging in as user1</msg>
+<msg time="2025-06-14T12:54:58.459564" level="INFO">Logging in as user1</msg>
 <arg>Logging in as ${record['username']}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-06-05T16:23:48.353219" elapsed="0.001730" />
+<status status="PASS" start="2025-06-14T12:54:58.458259" elapsed="0.002157" />
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-06-05T16:23:48.357298" level="INFO">Typing text 'user1' into text field 'id=username'.</msg>
+<msg time="2025-06-14T12:54:58.464137" level="INFO">Typing text 'user1' into text field 'id=username'.</msg>
 <arg>id=username</arg>
 <arg>${record['username']}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-05T16:23:48.356123" elapsed="0.340707" />
+<status status="PASS" start="2025-06-14T12:54:58.461684" elapsed="0.349878" />
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-06-05T16:23:48.703318" level="INFO">Typing text 'pass1' into text field 'id=password'.</msg>
+<msg time="2025-06-14T12:54:58.814829" level="INFO">Typing text 'pass1' into text field 'id=password'.</msg>
 <arg>id=password</arg>
 <arg>${record['password']}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-05T16:23:48.700407" elapsed="0.426617" />
+<status status="PASS" start="2025-06-14T12:54:58.813342" elapsed="0.266264" />
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-06-05T16:23:49.131465" level="INFO">Clicking button 'tag:button'.</msg>
+<msg time="2025-06-14T12:54:59.083214" level="INFO">Clicking button 'tag:button'.</msg>
 <arg>tag:button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-05T16:23:49.130334" elapsed="1.070021" />
+<status status="PASS" start="2025-06-14T12:54:59.082045" elapsed="0.901543" />
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-06-05T16:24:50.206225" level="INFO">Slept 1 minute.</msg>
+<msg time="2025-06-14T12:55:59.989952" level="INFO">Slept 1 minute.</msg>
 <arg>60s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-06-05T16:23:50.203994" elapsed="60.005501" />
+<status status="PASS" start="2025-06-14T12:54:59.986405" elapsed="60.008439" />
 </kw>
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2025-06-05T16:24:50.212803" level="INFO">Opening url 'https://the-internet.herokuapp.com/login'</msg>
+<msg time="2025-06-14T12:56:00.001267" level="INFO">Opening url 'https://the-internet.herokuapp.com/login'</msg>
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2025-06-05T16:24:50.212071" elapsed="1.164454" />
+<status status="PASS" start="2025-06-14T12:55:59.999199" elapsed="1.180203" />
 </kw>
 <var name="${record}">{'username': 'user1', 'password': 'pass1'}</var>
-<status status="PASS" start="2025-06-05T16:23:48.352812" elapsed="63.026130" />
+<status status="PASS" start="2025-06-14T12:54:58.457737" elapsed="62.723256" />
 </iter>
 <iter>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-06-05T16:24:51.383066" level="INFO">Logging in as user2</msg>
+<msg time="2025-06-14T12:56:01.185579" level="INFO">Logging in as user2</msg>
 <arg>Logging in as ${record['username']}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-06-05T16:24:51.381463" elapsed="0.002589" />
+<status status="PASS" start="2025-06-14T12:56:01.183753" elapsed="0.002701" />
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-06-05T16:24:51.386588" level="INFO">Typing text 'user2' into text field 'id=username'.</msg>
+<msg time="2025-06-14T12:56:01.189527" level="INFO">Typing text 'user2' into text field 'id=username'.</msg>
 <arg>id=username</arg>
 <arg>${record['username']}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-05T16:24:51.385524" elapsed="0.277029" />
+<status status="PASS" start="2025-06-14T12:56:01.187834" elapsed="0.274718" />
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-06-05T16:24:51.667676" level="INFO">Typing text 'pass2' into text field 'id=password'.</msg>
+<msg time="2025-06-14T12:56:01.467158" level="INFO">Typing text 'pass2' into text field 'id=password'.</msg>
 <arg>id=password</arg>
 <arg>${record['password']}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-05T16:24:51.665822" elapsed="0.286423" />
+<status status="PASS" start="2025-06-14T12:56:01.464982" elapsed="0.241582" />
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-06-05T16:24:51.957115" level="INFO">Clicking button 'tag:button'.</msg>
+<msg time="2025-06-14T12:56:01.709129" level="INFO">Clicking button 'tag:button'.</msg>
 <arg>tag:button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-05T16:24:51.955728" elapsed="0.934356" />
+<status status="PASS" start="2025-06-14T12:56:01.708156" elapsed="0.866443" />
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-06-05T16:25:52.897322" level="INFO">Slept 1 minute.</msg>
+<msg time="2025-06-14T12:57:02.580159" level="INFO">Slept 1 minute.</msg>
 <arg>60s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-06-05T16:24:52.893490" elapsed="60.005571" />
+<status status="PASS" start="2025-06-14T12:56:02.576979" elapsed="60.010152" />
 </kw>
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2025-06-05T16:25:52.902282" level="INFO">Opening url 'https://the-internet.herokuapp.com/login'</msg>
+<msg time="2025-06-14T12:57:02.593878" level="INFO">Opening url 'https://the-internet.herokuapp.com/login'</msg>
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2025-06-05T16:25:52.901211" elapsed="1.228863" />
+<status status="PASS" start="2025-06-14T12:57:02.591701" elapsed="1.110596" />
 </kw>
 <var name="${record}">{'username': 'user2', 'password': 'pass2'}</var>
-<status status="PASS" start="2025-06-05T16:24:51.380609" elapsed="62.751316" />
+<status status="PASS" start="2025-06-14T12:56:01.182839" elapsed="62.522166" />
 </iter>
 <iter>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-06-05T16:25:54.135747" level="INFO">Logging in as user3</msg>
+<msg time="2025-06-14T12:57:03.710910" level="INFO">Logging in as user3</msg>
 <arg>Logging in as ${record['username']}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-06-05T16:25:54.134423" elapsed="0.002216" />
+<status status="PASS" start="2025-06-14T12:57:03.708558" elapsed="0.003560" />
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-06-05T16:25:54.138965" level="INFO">Typing text 'user3' into text field 'id=username'.</msg>
+<msg time="2025-06-14T12:57:03.716346" level="INFO">Typing text 'user3' into text field 'id=username'.</msg>
 <arg>id=username</arg>
 <arg>${record['username']}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-05T16:25:54.137914" elapsed="0.397050" />
+<status status="PASS" start="2025-06-14T12:57:03.714224" elapsed="0.251310" />
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-06-05T16:25:54.540252" level="INFO">Typing text 'pass3' into text field 'id=password'.</msg>
+<msg time="2025-06-14T12:57:03.972676" level="INFO">Typing text 'pass3' into text field 'id=password'.</msg>
 <arg>id=password</arg>
 <arg>${record['password']}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-05T16:25:54.538398" elapsed="0.330082" />
+<status status="PASS" start="2025-06-14T12:57:03.969056" elapsed="0.240680" />
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-06-05T16:25:54.872415" level="INFO">Clicking button 'tag:button'.</msg>
+<msg time="2025-06-14T12:57:04.216529" level="INFO">Clicking button 'tag:button'.</msg>
 <arg>tag:button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-05T16:25:54.871707" elapsed="1.100609" />
+<status status="PASS" start="2025-06-14T12:57:04.214370" elapsed="0.329707" />
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-06-05T16:26:55.978262" level="INFO">Slept 1 minute.</msg>
+<msg time="2025-06-14T12:58:04.550200" level="INFO">Slept 1 minute.</msg>
 <arg>60s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-06-05T16:25:55.975019" elapsed="60.005893" />
+<status status="PASS" start="2025-06-14T12:57:04.546781" elapsed="60.007436" />
 </kw>
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2025-06-05T16:26:55.984323" level="INFO">Opening url 'https://the-internet.herokuapp.com/login'</msg>
+<msg time="2025-06-14T12:58:04.560869" level="INFO">Opening url 'https://the-internet.herokuapp.com/login'</msg>
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2025-06-05T16:26:55.983078" elapsed="1.401101" />
+<status status="PASS" start="2025-06-14T12:58:04.558858" elapsed="1.158077" />
 </kw>
 <var name="${record}">{'username': 'user3', 'password': 'pass3'}</var>
-<status status="PASS" start="2025-06-05T16:25:54.133427" elapsed="63.252463" />
+<status status="PASS" start="2025-06-14T12:57:03.707396" elapsed="62.011879" />
 </iter>
 <iter>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-06-05T16:26:57.389331" level="INFO">Logging in as user50</msg>
+<msg time="2025-06-14T12:58:05.724862" level="INFO">Logging in as user4</msg>
 <arg>Logging in as ${record['username']}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-06-05T16:26:57.387838" elapsed="0.002356" />
+<status status="PASS" start="2025-06-14T12:58:05.723390" elapsed="0.002327" />
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-06-05T16:26:57.392669" level="INFO">Typing text 'user50' into text field 'id=username'.</msg>
+<msg time="2025-06-14T12:58:05.728275" level="INFO">Typing text 'user4' into text field 'id=username'.</msg>
 <arg>id=username</arg>
 <arg>${record['username']}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-05T16:26:57.391454" elapsed="0.280808" />
+<status status="PASS" start="2025-06-14T12:58:05.727046" elapsed="0.241562" />
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-06-05T16:26:57.677342" level="INFO">Typing text 'pass50' into text field 'id=password'.</msg>
+<msg time="2025-06-14T12:58:05.976157" level="INFO">Typing text 'pass3' into text field 'id=password'.</msg>
 <arg>id=password</arg>
 <arg>${record['password']}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-05T16:26:57.674958" elapsed="0.282304" />
+<status status="PASS" start="2025-06-14T12:58:05.972885" elapsed="0.248858" />
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-06-05T16:26:57.960639" level="INFO">Clicking button 'tag:button'.</msg>
+<msg time="2025-06-14T12:58:06.228157" level="INFO">Clicking button 'tag:button'.</msg>
 <arg>tag:button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-05T16:26:57.959599" elapsed="1.196377" />
+<status status="PASS" start="2025-06-14T12:58:06.226274" elapsed="0.823320" />
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-06-05T16:27:59.159929" level="INFO">Slept 1 minute.</msg>
+<msg time="2025-06-14T12:59:07.054836" level="INFO">Slept 1 minute.</msg>
 <arg>60s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-06-05T16:26:59.157171" elapsed="60.005332" />
+<status status="PASS" start="2025-06-14T12:58:07.051973" elapsed="60.005194" />
 </kw>
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2025-06-05T16:27:59.165679" level="INFO">Opening url 'https://the-internet.herokuapp.com/login'</msg>
+<msg time="2025-06-14T12:59:07.062921" level="INFO">Opening url 'https://the-internet.herokuapp.com/login'</msg>
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2025-06-05T16:27:59.164639" elapsed="30.631773" />
+<status status="PASS" start="2025-06-14T12:59:07.061184" elapsed="1.024458" />
 </kw>
-<var name="${record}">{'username': 'user50', 'password': 'pass50'}</var>
-<status status="PASS" start="2025-06-05T16:26:57.387316" elapsed="92.410602" />
+<var name="${record}">{'username': 'user4', 'password': 'pass3'}</var>
+<status status="PASS" start="2025-06-14T12:58:05.721471" elapsed="62.367854" />
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-14T12:59:08.093285" level="INFO">Logging in as user5</msg>
+<arg>Logging in as ${record['username']}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-14T12:59:08.091718" elapsed="0.003015" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T12:59:08.098788" level="INFO">Typing text 'user5' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>${record['username']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T12:59:08.096683" elapsed="0.298735" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T12:59:08.402913" level="INFO">Typing text 'pass3' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${record['password']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T12:59:08.399652" elapsed="0.263729" />
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-14T12:59:08.669467" level="INFO">Clicking button 'tag:button'.</msg>
+<arg>tag:button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T12:59:08.667706" elapsed="0.906425" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-14T13:00:09.582724" level="INFO">Slept 1 minute.</msg>
+<arg>60s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-14T12:59:09.578364" elapsed="60.008034" />
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:00:09.592689" level="INFO">Opening url 'https://the-internet.herokuapp.com/login'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-06-14T13:00:09.591093" elapsed="1.097788" />
+</kw>
+<var name="${record}">{'username': 'user5', 'password': 'pass3'}</var>
+<status status="PASS" start="2025-06-14T12:59:08.091054" elapsed="62.601463" />
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-14T13:00:10.699161" level="INFO">Logging in as user6</msg>
+<arg>Logging in as ${record['username']}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-14T13:00:10.696909" elapsed="0.003353" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:00:10.703480" level="INFO">Typing text 'user6' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>${record['username']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:00:10.701958" elapsed="0.276220" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:00:10.985534" level="INFO">Typing text 'pass3' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${record['password']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:00:10.982272" elapsed="0.274844" />
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:00:11.263124" level="INFO">Clicking button 'tag:button'.</msg>
+<arg>tag:button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:00:11.261325" elapsed="0.356757" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-14T13:01:11.625929" level="INFO">Slept 1 minute.</msg>
+<arg>60s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-14T13:00:11.622135" elapsed="60.010128" />
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:01:11.639735" level="INFO">Opening url 'https://the-internet.herokuapp.com/login'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-06-14T13:01:11.637725" elapsed="1.386356" />
+</kw>
+<var name="${record}">{'username': 'user6', 'password': 'pass3'}</var>
+<status status="PASS" start="2025-06-14T13:00:10.695760" elapsed="62.330020" />
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-14T13:01:13.031134" level="INFO">Logging in as user7</msg>
+<arg>Logging in as ${record['username']}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-14T13:01:13.028325" elapsed="0.003993" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:01:13.035740" level="INFO">Typing text 'user7' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>${record['username']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:01:13.034036" elapsed="0.273713" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:01:13.311867" level="INFO">Typing text 'pass3' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${record['password']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:01:13.310163" elapsed="0.255803" />
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:01:13.570254" level="INFO">Clicking button 'tag:button'.</msg>
+<arg>tag:button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:01:13.568208" elapsed="1.063857" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-14T13:02:14.634995" level="INFO">Slept 1 minute.</msg>
+<arg>60s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-14T13:01:14.633835" elapsed="60.003257" />
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:02:14.640937" level="INFO">Opening url 'https://the-internet.herokuapp.com/login'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-06-14T13:02:14.639721" elapsed="1.057722" />
+</kw>
+<var name="${record}">{'username': 'user7', 'password': 'pass3'}</var>
+<status status="PASS" start="2025-06-14T13:01:13.027308" elapsed="62.673292" />
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-14T13:02:15.706710" level="INFO">Logging in as user8</msg>
+<arg>Logging in as ${record['username']}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-14T13:02:15.704629" elapsed="0.003293" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:02:15.712116" level="INFO">Typing text 'user8' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>${record['username']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:02:15.710011" elapsed="0.244829" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:02:15.957627" level="INFO">Typing text 'pass3' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${record['password']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:02:15.956413" elapsed="0.255736" />
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:02:16.215028" level="INFO">Clicking button 'tag:button'.</msg>
+<arg>tag:button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:02:16.214018" elapsed="1.108437" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-14T13:03:17.327230" level="INFO">Slept 1 minute.</msg>
+<arg>60s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-14T13:02:17.324629" elapsed="60.005100" />
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:03:17.335229" level="INFO">Opening url 'https://the-internet.herokuapp.com/login'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-06-14T13:03:17.334019" elapsed="1.107282" />
+</kw>
+<var name="${record}">{'username': 'user8', 'password': 'pass3'}</var>
+<status status="PASS" start="2025-06-14T13:02:15.703415" elapsed="62.742082" />
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-14T13:03:18.453433" level="INFO">Logging in as user9</msg>
+<arg>Logging in as ${record['username']}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-14T13:03:18.450557" elapsed="0.004143" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:03:18.457961" level="INFO">Typing text 'user9' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>${record['username']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:03:18.456434" elapsed="0.301655" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:03:18.765825" level="INFO">Typing text 'pass3' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${record['password']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:03:18.762493" elapsed="0.249611" />
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:03:19.018135" level="INFO">Clicking button 'tag:button'.</msg>
+<arg>tag:button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:03:19.016294" elapsed="0.378538" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-14T13:04:19.402736" level="INFO">Slept 1 minute.</msg>
+<arg>60s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-14T13:03:19.398430" elapsed="60.008013" />
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:04:19.412873" level="INFO">Opening url 'https://the-internet.herokuapp.com/login'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-06-14T13:04:19.410924" elapsed="0.991523" />
+</kw>
+<var name="${record}">{'username': 'user9', 'password': 'pass3'}</var>
+<status status="PASS" start="2025-06-14T13:03:18.449276" elapsed="61.955690" />
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-14T13:04:20.408738" level="INFO">Logging in as user10</msg>
+<arg>Logging in as ${record['username']}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-14T13:04:20.407398" elapsed="0.002451" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:04:20.413271" level="INFO">Typing text 'user10' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>${record['username']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:04:20.411624" elapsed="0.350927" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:04:20.766605" level="INFO">Typing text 'pass3' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${record['password']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:04:20.764847" elapsed="0.236271" />
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:04:21.007153" level="INFO">Clicking button 'tag:button'.</msg>
+<arg>tag:button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:04:21.005281" elapsed="0.831747" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-14T13:05:21.844498" level="INFO">Slept 1 minute.</msg>
+<arg>60s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-14T13:04:21.841556" elapsed="60.005632" />
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:05:21.851375" level="INFO">Opening url 'https://the-internet.herokuapp.com/login'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-06-14T13:05:21.850099" elapsed="0.845526" />
+</kw>
+<var name="${record}">{'username': 'user10', 'password': 'pass3'}</var>
+<status status="PASS" start="2025-06-14T13:04:20.406732" elapsed="62.289869" />
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-14T13:05:22.698612" level="INFO">Logging in as user11</msg>
+<arg>Logging in as ${record['username']}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-14T13:05:22.697897" elapsed="0.001207" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:05:22.700578" level="INFO">Typing text 'user11' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>${record['username']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:05:22.699874" elapsed="0.279502" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:05:22.981210" level="INFO">Typing text 'pass3' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${record['password']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:05:22.980439" elapsed="0.267508" />
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:05:23.250800" level="INFO">Clicking button 'tag:button'.</msg>
+<arg>tag:button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:05:23.249953" elapsed="0.405656" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-14T13:06:23.668322" level="INFO">Slept 1 minute.</msg>
+<arg>60s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-14T13:05:23.659409" elapsed="60.015858" />
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:06:23.682645" level="INFO">Opening url 'https://the-internet.herokuapp.com/login'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-06-14T13:06:23.680865" elapsed="1.156725" />
+</kw>
+<var name="${record}">{'username': 'user11', 'password': 'pass3'}</var>
+<status status="PASS" start="2025-06-14T13:05:22.697555" elapsed="62.141726" />
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-14T13:06:24.842776" level="INFO">Logging in as user12</msg>
+<arg>Logging in as ${record['username']}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-14T13:06:24.841448" elapsed="0.002048" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:06:24.845914" level="INFO">Typing text 'user12' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>${record['username']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:06:24.844638" elapsed="0.291935" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:06:25.142426" level="INFO">Typing text 'pass3' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${record['password']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:06:25.140775" elapsed="0.281040" />
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:06:25.426766" level="INFO">Clicking button 'tag:button'.</msg>
+<arg>tag:button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:06:25.425523" elapsed="0.964826" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-14T13:07:26.396715" level="INFO">Slept 1 minute.</msg>
+<arg>60s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-14T13:06:26.392893" elapsed="60.007479" />
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:07:26.406881" level="INFO">Opening url 'https://the-internet.herokuapp.com/login'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-06-14T13:07:26.404777" elapsed="1.470642" />
+</kw>
+<var name="${record}">{'username': 'user12', 'password': 'pass3'}</var>
+<status status="PASS" start="2025-06-14T13:06:24.840894" elapsed="63.036310" />
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-14T13:07:27.881171" level="INFO">Logging in as user13</msg>
+<arg>Logging in as ${record['username']}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-14T13:07:27.879379" elapsed="0.002851" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:07:27.885331" level="INFO">Typing text 'user13' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>${record['username']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:07:27.883923" elapsed="0.252326" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:07:28.142968" level="INFO">Typing text 'pass3' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${record['password']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:07:28.140450" elapsed="0.238379" />
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:07:28.383310" level="INFO">Clicking button 'tag:button'.</msg>
+<arg>tag:button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:07:28.381959" elapsed="0.325178" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-14T13:08:28.709814" level="INFO">Slept 1 minute.</msg>
+<arg>60s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-14T13:07:28.708762" elapsed="60.002371" />
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:08:28.715474" level="INFO">Opening url 'https://the-internet.herokuapp.com/login'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-06-14T13:08:28.714325" elapsed="1.107362" />
+</kw>
+<var name="${record}">{'username': 'user13', 'password': 'pass3'}</var>
+<status status="PASS" start="2025-06-14T13:07:27.878624" elapsed="61.945872" />
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-14T13:08:29.828911" level="INFO">Logging in as user14</msg>
+<arg>Logging in as ${record['username']}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-14T13:08:29.827235" elapsed="0.002718" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:08:29.833016" level="INFO">Typing text 'user14' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>${record['username']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:08:29.831592" elapsed="0.293497" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:08:30.129261" level="INFO">Typing text 'pass3' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${record['password']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:08:30.127366" elapsed="0.311089" />
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:08:30.441630" level="INFO">Clicking button 'tag:button'.</msg>
+<arg>tag:button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:08:30.440296" elapsed="1.108105" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-14T13:09:31.556558" level="INFO">Slept 1 minute.</msg>
+<arg>60s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-14T13:08:31.553275" elapsed="60.004994" />
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:09:31.562993" level="INFO">Opening url 'https://the-internet.herokuapp.com/login'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-06-14T13:09:31.561803" elapsed="1.079727" />
+</kw>
+<var name="${record}">{'username': 'user14', 'password': 'pass3'}</var>
+<status status="PASS" start="2025-06-14T13:08:29.826349" elapsed="62.817821" />
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-14T13:09:32.650363" level="INFO">Logging in as user15</msg>
+<arg>Logging in as ${record['username']}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-14T13:09:32.648735" elapsed="0.002522" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:09:32.654363" level="INFO">Typing text 'user15' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>${record['username']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:09:32.652688" elapsed="0.298601" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:09:32.955853" level="INFO">Typing text 'pass3' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${record['password']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:09:32.953917" elapsed="0.273258" />
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:09:33.230621" level="INFO">Clicking button 'tag:button'.</msg>
+<arg>tag:button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:09:33.229906" elapsed="0.400700" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-14T13:10:33.641788" level="INFO">Slept 1 minute.</msg>
+<arg>60s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-14T13:09:33.636082" elapsed="60.011193" />
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:10:33.658499" level="INFO">Opening url 'https://the-internet.herokuapp.com/login'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-06-14T13:10:33.655477" elapsed="1.124779" />
+</kw>
+<var name="${record}">{'username': 'user15', 'password': 'pass3'}</var>
+<status status="PASS" start="2025-06-14T13:09:32.647708" elapsed="62.134266" />
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-14T13:10:34.785789" level="INFO">Logging in as user16</msg>
+<arg>Logging in as ${record['username']}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-14T13:10:34.784270" elapsed="0.002232" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:10:34.788939" level="INFO">Typing text 'user16' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>${record['username']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:10:34.787683" elapsed="0.290098" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:10:35.082531" level="INFO">Typing text 'pass3' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${record['password']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:10:35.080511" elapsed="0.268598" />
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:10:35.352973" level="INFO">Clicking button 'tag:button'.</msg>
+<arg>tag:button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:10:35.352079" elapsed="0.888909" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-14T13:11:36.243966" level="INFO">Slept 1 minute.</msg>
+<arg>60s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-14T13:10:36.242846" elapsed="60.003156" />
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:11:36.250526" level="INFO">Opening url 'https://the-internet.herokuapp.com/login'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-06-14T13:11:36.248320" elapsed="1.297570" />
+</kw>
+<var name="${record}">{'username': 'user16', 'password': 'pass3'}</var>
+<status status="PASS" start="2025-06-14T13:10:34.783603" elapsed="62.764633" />
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-14T13:11:37.552439" level="INFO">Logging in as user17</msg>
+<arg>Logging in as ${record['username']}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-14T13:11:37.550911" elapsed="0.002375" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:11:37.555967" level="INFO">Typing text 'user17' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>${record['username']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:11:37.554661" elapsed="0.400838" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:11:37.958825" level="INFO">Typing text 'pass3' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${record['password']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:11:37.957519" elapsed="0.267262" />
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:11:38.228844" level="INFO">Clicking button 'tag:button'.</msg>
+<arg>tag:button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:11:38.227292" elapsed="0.368120" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-14T13:12:38.600819" level="INFO">Slept 1 minute.</msg>
+<arg>60s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-14T13:11:38.598628" elapsed="60.004478" />
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:12:38.606564" level="INFO">Opening url 'https://the-internet.herokuapp.com/login'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-06-14T13:12:38.605443" elapsed="1.099141" />
+</kw>
+<var name="${record}">{'username': 'user17', 'password': 'pass3'}</var>
+<status status="PASS" start="2025-06-14T13:11:37.550058" elapsed="62.156711" />
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-14T13:12:39.712043" level="INFO">Logging in as user18</msg>
+<arg>Logging in as ${record['username']}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-14T13:12:39.710153" elapsed="0.002908" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:12:39.718106" level="INFO">Typing text 'user18' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>${record['username']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:12:39.715893" elapsed="0.270049" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:12:39.990246" level="INFO">Typing text 'pass3' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${record['password']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:12:39.988005" elapsed="0.242434" />
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:12:40.235021" level="INFO">Clicking button 'tag:button'.</msg>
+<arg>tag:button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:12:40.234229" elapsed="0.349723" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-14T13:13:40.587247" level="INFO">Slept 1 minute.</msg>
+<arg>60s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-14T13:12:40.585492" elapsed="60.004564" />
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:13:40.595711" level="INFO">Opening url 'https://the-internet.herokuapp.com/login'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-06-14T13:13:40.594027" elapsed="1.113114" />
+</kw>
+<var name="${record}">{'username': 'user18', 'password': 'pass3'}</var>
+<status status="PASS" start="2025-06-14T13:12:39.709011" elapsed="62.000453" />
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-14T13:13:41.716175" level="INFO">Logging in as user19</msg>
+<arg>Logging in as ${record['username']}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-14T13:13:41.713075" elapsed="0.004615" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:13:41.721467" level="INFO">Typing text 'user19' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>${record['username']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:13:41.719644" elapsed="0.298766" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:13:42.023131" level="INFO">Typing text 'pass3' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${record['password']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:13:42.020730" elapsed="0.287047" />
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:13:42.311339" level="INFO">Clicking button 'tag:button'.</msg>
+<arg>tag:button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:13:42.310490" elapsed="0.929130" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-14T13:14:43.245364" level="INFO">Slept 1 minute.</msg>
+<arg>60s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-14T13:13:43.243046" elapsed="60.005117" />
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:14:43.253666" level="INFO">Opening url 'https://the-internet.herokuapp.com/login'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-06-14T13:14:43.252248" elapsed="1.096909" />
+</kw>
+<var name="${record}">{'username': 'user19', 'password': 'pass3'}</var>
+<status status="PASS" start="2025-06-14T13:13:41.711929" elapsed="62.639874" />
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-14T13:14:44.356036" level="INFO">Logging in as user20</msg>
+<arg>Logging in as ${record['username']}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-14T13:14:44.354547" elapsed="0.002564" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:14:44.360167" level="INFO">Typing text 'user20' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>${record['username']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:14:44.358798" elapsed="0.274560" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:14:44.637185" level="INFO">Typing text 'pass3' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${record['password']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:14:44.635558" elapsed="0.267812" />
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:14:44.906834" level="INFO">Clicking button 'tag:button'.</msg>
+<arg>tag:button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:14:44.905816" elapsed="0.349375" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-14T13:15:45.261340" level="INFO">Slept 1 minute.</msg>
+<arg>60s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-14T13:14:45.258824" elapsed="60.004307" />
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:15:45.266909" level="INFO">Opening url 'https://the-internet.herokuapp.com/login'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-06-14T13:15:45.265563" elapsed="1.068430" />
+</kw>
+<var name="${record}">{'username': 'user20', 'password': 'pass3'}</var>
+<status status="PASS" start="2025-06-14T13:14:44.353834" elapsed="61.984390" />
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-14T13:15:46.344141" level="INFO">Logging in as user21</msg>
+<arg>Logging in as ${record['username']}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-14T13:15:46.342578" elapsed="0.003317" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:15:46.350421" level="INFO">Typing text 'user21' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>${record['username']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:15:46.348325" elapsed="0.304816" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:15:46.656896" level="INFO">Typing text 'pass3' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${record['password']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:15:46.655252" elapsed="0.264310" />
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:15:46.922756" level="INFO">Clicking button 'tag:button'.</msg>
+<arg>tag:button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:15:46.921765" elapsed="0.414573" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-14T13:16:47.340570" level="INFO">Slept 1 minute.</msg>
+<arg>60s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-14T13:15:47.337871" elapsed="60.004923" />
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:16:47.345948" level="INFO">Opening url 'https://the-internet.herokuapp.com/login'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-06-14T13:16:47.345180" elapsed="0.846502" />
+</kw>
+<var name="${record}">{'username': 'user21', 'password': 'pass3'}</var>
+<status status="PASS" start="2025-06-14T13:15:46.341675" elapsed="61.852346" />
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-14T13:16:48.198715" level="INFO">Logging in as user22</msg>
+<arg>Logging in as ${record['username']}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-14T13:16:48.196844" elapsed="0.003031" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:16:48.203674" level="INFO">Typing text 'user22' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>${record['username']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:16:48.201410" elapsed="0.294586" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:16:48.503449" level="INFO">Typing text 'pass3' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${record['password']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:16:48.500173" elapsed="0.245407" />
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:16:48.750875" level="INFO">Clicking button 'tag:button'.</msg>
+<arg>tag:button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:16:48.749368" elapsed="0.842884" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-14T13:17:49.596751" level="INFO">Slept 1 minute.</msg>
+<arg>60s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-14T13:16:49.594898" elapsed="60.004688" />
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:17:49.605638" level="INFO">Opening url 'https://the-internet.herokuapp.com/login'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-06-14T13:17:49.603812" elapsed="1.088684" />
+</kw>
+<var name="${record}">{'username': 'user22', 'password': 'pass3'}</var>
+<status status="PASS" start="2025-06-14T13:16:48.195942" elapsed="62.499369" />
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-14T13:17:50.700207" level="INFO">Logging in as user23</msg>
+<arg>Logging in as ${record['username']}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-14T13:17:50.698387" elapsed="0.002903" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:17:50.704469" level="INFO">Typing text 'user23' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>${record['username']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:17:50.702984" elapsed="0.276697" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:17:50.983760" level="INFO">Typing text 'pass3' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${record['password']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:17:50.982439" elapsed="0.256437" />
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:17:51.244798" level="INFO">Clicking button 'tag:button'.</msg>
+<arg>tag:button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:17:51.242996" elapsed="0.880600" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-14T13:18:52.131339" level="INFO">Slept 1 minute.</msg>
+<arg>60s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-14T13:17:52.127664" elapsed="60.005800" />
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:18:52.135693" level="INFO">Opening url 'https://the-internet.herokuapp.com/login'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-06-14T13:18:52.135036" elapsed="1.027235" />
+</kw>
+<var name="${record}">{'username': 'user23', 'password': 'pass3'}</var>
+<status status="PASS" start="2025-06-14T13:17:50.697483" elapsed="62.466700" />
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-14T13:18:53.168390" level="INFO">Logging in as user24</msg>
+<arg>Logging in as ${record['username']}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-14T13:18:53.166878" elapsed="0.002352" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:18:53.171954" level="INFO">Typing text 'user24' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>${record['username']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:18:53.170579" elapsed="0.294792" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:18:53.469767" level="INFO">Typing text 'pass3' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${record['password']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:18:53.467956" elapsed="0.255863" />
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:18:53.728976" level="INFO">Clicking button 'tag:button'.</msg>
+<arg>tag:button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:18:53.727426" elapsed="0.854350" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-14T13:19:54.586995" level="INFO">Slept 1 minute.</msg>
+<arg>60s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-14T13:18:54.583346" elapsed="60.009493" />
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:19:54.598570" level="INFO">Opening url 'https://the-internet.herokuapp.com/login'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-06-14T13:19:54.597172" elapsed="1.279256" />
+</kw>
+<var name="${record}">{'username': 'user24', 'password': 'pass3'}</var>
+<status status="PASS" start="2025-06-14T13:18:53.165941" elapsed="62.712094" />
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-14T13:19:55.881365" level="INFO">Logging in as user25</msg>
+<arg>Logging in as ${record['username']}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-14T13:19:55.880045" elapsed="0.002068" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:19:55.884544" level="INFO">Typing text 'user25' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>${record['username']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:19:55.883275" elapsed="0.314234" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:19:56.202537" level="INFO">Typing text 'pass3' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${record['password']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:19:56.200774" elapsed="0.268642" />
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:19:56.472304" level="INFO">Clicking button 'tag:button'.</msg>
+<arg>tag:button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:19:56.471422" elapsed="0.466196" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-14T13:20:56.944213" level="INFO">Slept 1 minute.</msg>
+<arg>60s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-14T13:19:56.940418" elapsed="60.010183" />
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:20:56.956477" level="INFO">Opening url 'https://the-internet.herokuapp.com/login'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-06-14T13:20:56.954813" elapsed="1.093722" />
+</kw>
+<var name="${record}">{'username': 'user25', 'password': 'pass3'}</var>
+<status status="PASS" start="2025-06-14T13:19:55.879522" elapsed="62.171599" />
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-14T13:20:58.056895" level="INFO">Logging in as user26</msg>
+<arg>Logging in as ${record['username']}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-14T13:20:58.054867" elapsed="0.003099" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:20:58.061461" level="INFO">Typing text 'user26' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>${record['username']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:20:58.059665" elapsed="0.278785" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:20:58.342314" level="INFO">Typing text 'pass3' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${record['password']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:20:58.340635" elapsed="0.273578" />
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:20:58.619035" level="INFO">Clicking button 'tag:button'.</msg>
+<arg>tag:button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:20:58.618034" elapsed="0.341841" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-14T13:21:58.968054" level="INFO">Slept 1 minute.</msg>
+<arg>60s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-14T13:20:58.963273" elapsed="60.009073" />
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:21:58.980952" level="INFO">Opening url 'https://the-internet.herokuapp.com/login'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-06-14T13:21:58.978353" elapsed="1.092612" />
+</kw>
+<var name="${record}">{'username': 'user26', 'password': 'pass3'}</var>
+<status status="PASS" start="2025-06-14T13:20:58.053892" elapsed="62.019013" />
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-14T13:22:00.077759" level="INFO">Logging in as user27</msg>
+<arg>Logging in as ${record['username']}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-14T13:22:00.075453" elapsed="0.003523" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:22:00.083143" level="INFO">Typing text 'user27' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>${record['username']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:22:00.080711" elapsed="0.264071" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:22:00.352618" level="INFO">Typing text 'pass3' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${record['password']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:22:00.349716" elapsed="0.253337" />
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:22:00.605574" level="INFO">Clicking button 'tag:button'.</msg>
+<arg>tag:button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:22:00.604741" elapsed="0.339143" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-14T13:23:00.952281" level="INFO">Slept 1 minute.</msg>
+<arg>60s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-14T13:22:00.947808" elapsed="60.006665" />
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:23:00.958376" level="INFO">Opening url 'https://the-internet.herokuapp.com/login'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-06-14T13:23:00.956938" elapsed="1.079446" />
+</kw>
+<var name="${record}">{'username': 'user27', 'password': 'pass3'}</var>
+<status status="PASS" start="2025-06-14T13:22:00.074530" elapsed="61.964480" />
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-14T13:23:02.045201" level="INFO">Logging in as user28</msg>
+<arg>Logging in as ${record['username']}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-14T13:23:02.042840" elapsed="0.003818" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:23:02.050250" level="INFO">Typing text 'user28' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>${record['username']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:23:02.048607" elapsed="0.280761" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:23:02.336778" level="INFO">Typing text 'pass3' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${record['password']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:23:02.334056" elapsed="0.261488" />
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:23:02.600144" level="INFO">Clicking button 'tag:button'.</msg>
+<arg>tag:button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:23:02.599407" elapsed="0.334423" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-14T13:24:02.939998" level="INFO">Slept 1 minute.</msg>
+<arg>60s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-14T13:23:02.936731" elapsed="60.004900" />
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:24:02.944895" level="INFO">Opening url 'https://the-internet.herokuapp.com/login'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-06-14T13:24:02.943922" elapsed="1.074492" />
+</kw>
+<var name="${record}">{'username': 'user28', 'password': 'pass3'}</var>
+<status status="PASS" start="2025-06-14T13:23:02.041637" elapsed="61.978698" />
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-14T13:24:04.024381" level="INFO">Logging in as user29</msg>
+<arg>Logging in as ${record['username']}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-14T13:24:04.022744" elapsed="0.002429" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:24:04.027845" level="INFO">Typing text 'user29' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>${record['username']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:24:04.026485" elapsed="0.287278" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:24:04.319611" level="INFO">Typing text 'pass3' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${record['password']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:24:04.317481" elapsed="0.281251" />
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:24:04.602140" level="INFO">Clicking button 'tag:button'.</msg>
+<arg>tag:button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:24:04.600944" elapsed="0.348979" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-14T13:25:04.955307" level="INFO">Slept 1 minute.</msg>
+<arg>60s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-14T13:24:04.952778" elapsed="60.004831" />
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:25:04.962758" level="INFO">Opening url 'https://the-internet.herokuapp.com/login'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-06-14T13:25:04.960140" elapsed="1.031964" />
+</kw>
+<var name="${record}">{'username': 'user29', 'password': 'pass3'}</var>
+<status status="PASS" start="2025-06-14T13:24:04.021821" elapsed="61.972661" />
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-14T13:25:05.999837" level="INFO">Logging in as user30</msg>
+<arg>Logging in as ${record['username']}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-14T13:25:05.998245" elapsed="0.002467" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:25:06.003769" level="INFO">Typing text 'user30' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>${record['username']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:25:06.002109" elapsed="0.267298" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:25:06.276207" level="INFO">Typing text 'pass3' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${record['password']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:25:06.273552" elapsed="0.280677" />
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:25:06.556659" level="INFO">Clicking button 'tag:button'.</msg>
+<arg>tag:button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:25:06.555956" elapsed="0.906719" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-14T13:26:07.467701" level="INFO">Slept 1 minute.</msg>
+<arg>60s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-14T13:25:07.465589" elapsed="60.003916" />
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:26:07.473985" level="INFO">Opening url 'https://the-internet.herokuapp.com/login'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-06-14T13:26:07.472912" elapsed="1.104412" />
+</kw>
+<var name="${record}">{'username': 'user30', 'password': 'pass3'}</var>
+<status status="PASS" start="2025-06-14T13:25:05.997236" elapsed="62.582010" />
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-14T13:26:08.584027" level="INFO">Logging in as user31</msg>
+<arg>Logging in as ${record['username']}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-14T13:26:08.581423" elapsed="0.003692" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:26:08.588518" level="INFO">Typing text 'user31' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>${record['username']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:26:08.587043" elapsed="0.276930" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:26:08.870689" level="INFO">Typing text 'pass3' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${record['password']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:26:08.868112" elapsed="0.260912" />
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:26:09.133865" level="INFO">Clicking button 'tag:button'.</msg>
+<arg>tag:button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:26:09.133098" elapsed="0.367197" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-14T13:27:09.506975" level="INFO">Slept 1 minute.</msg>
+<arg>60s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-14T13:26:09.504122" elapsed="60.004479" />
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:27:09.512214" level="INFO">Opening url 'https://the-internet.herokuapp.com/login'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-06-14T13:27:09.510638" elapsed="1.064647" />
+</kw>
+<var name="${record}">{'username': 'user31', 'password': 'pass3'}</var>
+<status status="PASS" start="2025-06-14T13:26:08.580684" elapsed="61.996541" />
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-14T13:27:10.582955" level="INFO">Logging in as user32</msg>
+<arg>Logging in as ${record['username']}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-14T13:27:10.580453" elapsed="0.004082" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:27:10.588729" level="INFO">Typing text 'user32' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>${record['username']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:27:10.587058" elapsed="0.265481" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:27:10.859718" level="INFO">Typing text 'pass3' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${record['password']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:27:10.856282" elapsed="0.253759" />
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:27:11.112556" level="INFO">Clicking button 'tag:button'.</msg>
+<arg>tag:button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:27:11.111753" elapsed="0.356044" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-14T13:28:11.475823" level="INFO">Slept 1 minute.</msg>
+<arg>60s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-14T13:27:11.472004" elapsed="60.009819" />
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:28:11.492042" level="INFO">Opening url 'https://the-internet.herokuapp.com/login'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-06-14T13:28:11.488583" elapsed="1.139545" />
+</kw>
+<var name="${record}">{'username': 'user32', 'password': 'pass3'}</var>
+<status status="PASS" start="2025-06-14T13:27:10.579497" elapsed="62.050682" />
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-14T13:28:12.635315" level="INFO">Logging in as user33</msg>
+<arg>Logging in as ${record['username']}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-14T13:28:12.633417" elapsed="0.002779" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:28:12.639245" level="INFO">Typing text 'user33' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>${record['username']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:28:12.637619" elapsed="0.258851" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:28:12.901370" level="INFO">Typing text 'pass3' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${record['password']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:28:12.898439" elapsed="0.259812" />
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:28:13.163652" level="INFO">Clicking button 'tag:button'.</msg>
+<arg>tag:button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:28:13.162002" elapsed="1.099065" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-14T13:29:14.267783" level="INFO">Slept 1 minute.</msg>
+<arg>60s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-14T13:28:14.265477" elapsed="60.004222" />
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:29:14.273132" level="INFO">Opening url 'https://the-internet.herokuapp.com/login'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-06-14T13:29:14.272131" elapsed="1.038387" />
+</kw>
+<var name="${record}">{'username': 'user33', 'password': 'pass3'}</var>
+<status status="PASS" start="2025-06-14T13:28:12.632344" elapsed="62.678925" />
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-14T13:29:15.313122" level="INFO">Logging in as user34</msg>
+<arg>Logging in as ${record['username']}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-14T13:29:15.312448" elapsed="0.001088" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:29:15.314798" level="INFO">Typing text 'user34' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>${record['username']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:29:15.314201" elapsed="0.296514" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:29:15.613234" level="INFO">Typing text 'pass3' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${record['password']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:29:15.611725" elapsed="0.274964" />
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:29:15.889131" level="INFO">Clicking button 'tag:button'.</msg>
+<arg>tag:button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:29:15.888425" elapsed="0.944779" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-14T13:30:16.837574" level="INFO">Slept 1 minute.</msg>
+<arg>60s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-14T13:29:16.834489" elapsed="60.007603" />
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:30:16.850910" level="INFO">Opening url 'https://the-internet.herokuapp.com/login'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-06-14T13:30:16.848609" elapsed="1.118087" />
+</kw>
+<var name="${record}">{'username': 'user34', 'password': 'pass3'}</var>
+<status status="PASS" start="2025-06-14T13:29:15.312066" elapsed="62.657612" />
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-14T13:30:17.975077" level="INFO">Logging in as user35</msg>
+<arg>Logging in as ${record['username']}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-14T13:30:17.973122" elapsed="0.002821" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:30:17.979234" level="INFO">Typing text 'user35' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>${record['username']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:30:17.977432" elapsed="0.274922" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:30:18.256936" level="INFO">Typing text 'pass3' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${record['password']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:30:18.255688" elapsed="0.256743" />
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:30:18.518396" level="INFO">Clicking button 'tag:button'.</msg>
+<arg>tag:button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:30:18.516569" elapsed="0.352022" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-14T13:31:18.873719" level="INFO">Slept 1 minute.</msg>
+<arg>60s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-14T13:30:18.872009" elapsed="60.003881" />
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:31:18.880256" level="INFO">Opening url 'https://the-internet.herokuapp.com/login'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-06-14T13:31:18.878951" elapsed="1.126824" />
+</kw>
+<var name="${record}">{'username': 'user35', 'password': 'pass3'}</var>
+<status status="PASS" start="2025-06-14T13:30:17.972135" elapsed="62.037525" />
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-14T13:31:20.013661" level="INFO">Logging in as user36</msg>
+<arg>Logging in as ${record['username']}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-14T13:31:20.012037" elapsed="0.002482" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:31:20.017782" level="INFO">Typing text 'user36' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>${record['username']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:31:20.016133" elapsed="0.307089" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:31:20.330791" level="INFO">Typing text 'pass3' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${record['password']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:31:20.327547" elapsed="0.279030" />
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:31:20.611718" level="INFO">Clicking button 'tag:button'.</msg>
+<arg>tag:button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:31:20.610179" elapsed="1.437397" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-14T13:32:22.052040" level="INFO">Slept 1 minute.</msg>
+<arg>60s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-14T13:31:22.049871" elapsed="60.004408" />
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:32:22.058690" level="INFO">Opening url 'https://the-internet.herokuapp.com/login'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-06-14T13:32:22.057356" elapsed="1.053787" />
+</kw>
+<var name="${record}">{'username': 'user36', 'password': 'pass3'}</var>
+<status status="PASS" start="2025-06-14T13:31:20.011281" elapsed="63.102194" />
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-14T13:32:23.117986" level="INFO">Logging in as user37</msg>
+<arg>Logging in as ${record['username']}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-14T13:32:23.116243" elapsed="0.002628" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:32:23.121512" level="INFO">Typing text 'user37' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>${record['username']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:32:23.120179" elapsed="0.329598" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:32:23.457388" level="INFO">Typing text 'pass3' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${record['password']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:32:23.453977" elapsed="0.271664" />
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:32:23.731764" level="INFO">Clicking button 'tag:button'.</msg>
+<arg>tag:button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:32:23.729878" elapsed="0.399386" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-14T13:33:24.136657" level="INFO">Slept 1 minute.</msg>
+<arg>60s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-14T13:32:24.133447" elapsed="60.006198" />
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:33:24.145974" level="INFO">Opening url 'https://the-internet.herokuapp.com/login'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-06-14T13:33:24.143903" elapsed="1.137965" />
+</kw>
+<var name="${record}">{'username': 'user37', 'password': 'pass3'}</var>
+<status status="PASS" start="2025-06-14T13:32:23.115340" elapsed="62.168877" />
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-14T13:33:25.288280" level="INFO">Logging in as user38</msg>
+<arg>Logging in as ${record['username']}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-14T13:33:25.286714" elapsed="0.002429" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:33:25.291932" level="INFO">Typing text 'user38' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>${record['username']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:33:25.290580" elapsed="0.265684" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:33:25.560592" level="INFO">Typing text 'pass3' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${record['password']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:33:25.558690" elapsed="0.255294" />
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:33:25.819462" level="INFO">Clicking button 'tag:button'.</msg>
+<arg>tag:button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:33:25.817806" elapsed="0.357357" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-14T13:34:26.182835" level="INFO">Slept 1 minute.</msg>
+<arg>60s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-14T13:33:26.178922" elapsed="60.007648" />
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:34:26.194532" level="INFO">Opening url 'https://the-internet.herokuapp.com/login'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-06-14T13:34:26.192543" elapsed="1.038656" />
+</kw>
+<var name="${record}">{'username': 'user38', 'password': 'pass3'}</var>
+<status status="PASS" start="2025-06-14T13:33:25.285876" elapsed="61.948578" />
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-14T13:34:27.239303" level="INFO">Logging in as user39</msg>
+<arg>Logging in as ${record['username']}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-14T13:34:27.237560" elapsed="0.002735" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:34:27.243314" level="INFO">Typing text 'user39' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>${record['username']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:34:27.241907" elapsed="0.295603" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:34:27.544899" level="INFO">Typing text 'pass3' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${record['password']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:34:27.541913" elapsed="0.340352" />
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:34:27.887408" level="INFO">Clicking button 'tag:button'.</msg>
+<arg>tag:button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:34:27.885908" elapsed="0.999313" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-14T13:35:28.892680" level="INFO">Slept 1 minute.</msg>
+<arg>60s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-14T13:34:28.889689" elapsed="60.005975" />
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:35:28.901635" level="INFO">Opening url 'https://the-internet.herokuapp.com/login'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-06-14T13:35:28.899946" elapsed="1.068821" />
+</kw>
+<var name="${record}">{'username': 'user39', 'password': 'pass3'}</var>
+<status status="PASS" start="2025-06-14T13:34:27.236614" elapsed="62.735041" />
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-14T13:35:29.977613" level="INFO">Logging in as user40</msg>
+<arg>Logging in as ${record['username']}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-14T13:35:29.975589" elapsed="0.003007" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:35:29.982216" level="INFO">Typing text 'user40' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>${record['username']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:35:29.980308" elapsed="0.367319" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:35:30.352996" level="INFO">Typing text 'pass3' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${record['password']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:35:30.350066" elapsed="0.412724" />
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:35:30.768988" level="INFO">Clicking button 'tag:button'.</msg>
+<arg>tag:button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:35:30.767087" elapsed="0.379763" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-14T13:36:31.154355" level="INFO">Slept 1 minute.</msg>
+<arg>60s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-14T13:35:31.151102" elapsed="60.006001" />
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:36:31.162761" level="INFO">Opening url 'https://the-internet.herokuapp.com/login'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-06-14T13:36:31.161186" elapsed="1.100824" />
+</kw>
+<var name="${record}">{'username': 'user40', 'password': 'pass3'}</var>
+<status status="PASS" start="2025-06-14T13:35:29.974615" elapsed="62.289632" />
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-14T13:36:32.268519" level="INFO">Logging in as user41</msg>
+<arg>Logging in as ${record['username']}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-14T13:36:32.266958" elapsed="0.002498" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:36:32.272293" level="INFO">Typing text 'user41' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>${record['username']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:36:32.271001" elapsed="0.322556" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:36:32.600135" level="INFO">Typing text 'pass3' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${record['password']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:36:32.597817" elapsed="0.308122" />
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:36:32.912288" level="INFO">Clicking button 'tag:button'.</msg>
+<arg>tag:button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:36:32.910303" elapsed="0.938050" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-14T13:37:33.853642" level="INFO">Slept 1 minute.</msg>
+<arg>60s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-14T13:36:33.850582" elapsed="60.009508" />
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:37:33.867411" level="INFO">Opening url 'https://the-internet.herokuapp.com/login'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-06-14T13:37:33.865491" elapsed="1.145819" />
+</kw>
+<var name="${record}">{'username': 'user41', 'password': 'pass3'}</var>
+<status status="PASS" start="2025-06-14T13:36:32.266087" elapsed="62.747561" />
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-14T13:37:35.018095" level="INFO">Logging in as user42</msg>
+<arg>Logging in as ${record['username']}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-14T13:37:35.016588" elapsed="0.002519" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:37:35.022779" level="INFO">Typing text 'user42' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>${record['username']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:37:35.020608" elapsed="0.452823" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:37:35.479970" level="INFO">Typing text 'pass3' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${record['password']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:37:35.477061" elapsed="0.265933" />
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:37:35.749046" level="INFO">Clicking button 'tag:button'.</msg>
+<arg>tag:button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:37:35.747179" elapsed="0.366317" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-14T13:38:36.121350" level="INFO">Slept 1 minute.</msg>
+<arg>60s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-14T13:37:36.118897" elapsed="60.005489" />
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:38:36.130182" level="INFO">Opening url 'https://the-internet.herokuapp.com/login'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-06-14T13:38:36.128383" elapsed="1.016527" />
+</kw>
+<var name="${record}">{'username': 'user42', 'password': 'pass3'}</var>
+<status status="PASS" start="2025-06-14T13:37:35.015702" elapsed="62.131915" />
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-14T13:38:37.153822" level="INFO">Logging in as user43</msg>
+<arg>Logging in as ${record['username']}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-14T13:38:37.151806" elapsed="0.003121" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:38:37.157929" level="INFO">Typing text 'user43' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>${record['username']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:38:37.156532" elapsed="0.299883" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:38:37.462183" level="INFO">Typing text 'pass3' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${record['password']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:38:37.458797" elapsed="0.259281" />
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:38:37.723772" level="INFO">Clicking button 'tag:button'.</msg>
+<arg>tag:button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:38:37.722122" elapsed="0.359426" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-14T13:39:38.090756" level="INFO">Slept 1 minute.</msg>
+<arg>60s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-14T13:38:38.085785" elapsed="60.008152" />
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:39:38.105168" level="INFO">Opening url 'https://the-internet.herokuapp.com/login'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-06-14T13:39:38.101416" elapsed="1.138211" />
+</kw>
+<var name="${record}">{'username': 'user43', 'password': 'pass3'}</var>
+<status status="PASS" start="2025-06-14T13:38:37.150797" elapsed="62.090235" />
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-14T13:39:39.244832" level="INFO">Logging in as user44</msg>
+<arg>Logging in as ${record['username']}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-14T13:39:39.243185" elapsed="0.002589" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:39:39.248731" level="INFO">Typing text 'user44' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>${record['username']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:39:39.247269" elapsed="0.327678" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:39:39.578213" level="INFO">Typing text 'pass3' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${record['password']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:39:39.576739" elapsed="0.301331" />
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:39:39.881864" level="INFO">Clicking button 'tag:button'.</msg>
+<arg>tag:button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:39:39.880492" elapsed="0.954238" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-14T13:40:40.839525" level="INFO">Slept 1 minute.</msg>
+<arg>60s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-14T13:39:40.836801" elapsed="60.009035" />
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:40:40.852721" level="INFO">Opening url 'https://the-internet.herokuapp.com/login'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-06-14T13:40:40.850836" elapsed="1.082113" />
+</kw>
+<var name="${record}">{'username': 'user44', 'password': 'pass3'}</var>
+<status status="PASS" start="2025-06-14T13:39:39.242541" elapsed="62.692485" />
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-14T13:40:41.942823" level="INFO">Logging in as user45</msg>
+<arg>Logging in as ${record['username']}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-14T13:40:41.939451" elapsed="0.004482" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:40:41.947367" level="INFO">Typing text 'user45' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>${record['username']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:40:41.945529" elapsed="0.307057" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:40:42.257125" level="INFO">Typing text 'pass3' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${record['password']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:40:42.254912" elapsed="0.259920" />
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:40:42.517776" level="INFO">Clicking button 'tag:button'.</msg>
+<arg>tag:button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-14T13:40:42.516825" elapsed="0.842148" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-14T13:41:43.369047" level="INFO">Slept 1 minute.</msg>
+<arg>60s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-14T13:40:43.361290" elapsed="60.015477" />
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:41:43.384419" level="INFO">Opening url 'https://the-internet.herokuapp.com/login'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-06-14T13:41:43.382120" elapsed="1.117072" />
+</kw>
+<var name="${record}">{'username': 'user45', 'password': 'pass3'}</var>
+<status status="PASS" start="2025-06-14T13:40:41.937188" elapsed="62.564234" />
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-14T13:41:44.506332" level="INFO">Logging in as user46</msg>
+<arg>Logging in as ${record['username']}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-14T13:41:44.504559" elapsed="0.002639" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-14T13:41:44.511393" level="INFO">Typing text 'user46' into text field 'id=username'.</msg>
+<msg time="2025-06-14T13:43:48.010418" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: Session not started or terminated
+</msg>
+<msg time="2025-06-14T13:43:48.013488" level="FAIL">WebDriverException: Message: Session not started or terminated
+</msg>
+<arg>id=username</arg>
+<arg>${record['username']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="FAIL" start="2025-06-14T13:41:44.509009" elapsed="123.537894">WebDriverException: Message: Session not started or terminated
+</status>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=password</arg>
+<arg>${record['password']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-06-14T13:43:48.048770" elapsed="0.000406" />
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>tag:button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-06-14T13:43:48.050195" elapsed="0.000289" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>60s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-06-14T13:43:48.051411" elapsed="0.000283" />
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" start="2025-06-14T13:43:48.052625" elapsed="0.000281" />
+</kw>
+<var name="${record}">{'username': 'user46', 'password': 'pass3'}</var>
+<status status="FAIL" start="2025-06-14T13:41:44.503587" elapsed="123.550192">WebDriverException: Message: Session not started or terminated
+</status>
 </iter>
 <var>${record}</var>
 <value>@{records}</value>
-<status status="PASS" start="2025-06-05T16:23:48.351070" elapsed="281.447892" />
+<status status="FAIL" start="2025-06-14T12:54:58.456963" elapsed="2929.597708">WebDriverException: Message: Session not started or terminated
+</status>
 </for>
-<status status="PASS" start="2025-06-05T16:23:48.344896" elapsed="281.454686" />
+<status status="FAIL" start="2025-06-14T12:54:58.444390" elapsed="2929.610941">WebDriverException: Message: Session not started or terminated
+</status>
 </test>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-06-05T16:28:30.547715" elapsed="0.001911" />
+<status status="PASS" start="2025-06-14T13:43:49.325239" elapsed="0.004007" />
 </kw>
-<status status="PASS" start="2025-06-05T16:23:31.570326" elapsed="298.980399" />
+<status status="FAIL" start="2025-06-14T12:54:41.456920" elapsed="2947.873896" />
 </suite>
-<status status="PASS" start="2025-06-05T16:23:31.570326" elapsed="298.980399" />
+<status status="FAIL" start="2025-06-14T12:54:41.456920" elapsed="2947.873896" />
 </suite><errors>
-<msg time="2025-06-05T16:23:31.609584" level="WARN">exexcutable_path is being deprecated. Please use service to configure the driver's executable_path as per documentation.</msg>
+<msg time="2025-06-14T12:54:41.505378" level="WARN">exexcutable_path is being deprecated. Please use service to configure the driver's executable_path as per documentation.</msg>
+<msg time="2025-06-14T13:43:48.010418" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: Session not started or terminated
+</msg>
 </errors>
 </robot>
